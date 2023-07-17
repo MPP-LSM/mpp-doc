@@ -13,6 +13,7 @@ nav:
           - tech_guide/mlc/photosynthesis_diffusion.md
           - tech_guide/mlc/photosynthesis_stomatal_conductance_model.md
           - tech_guide/mlc/photosynthesis_numerical_solution.md
+          - tech_guide/mlc/leaf_boundary_layer_model.md
 
 edit_uri: ""
 
