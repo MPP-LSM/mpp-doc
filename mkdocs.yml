@@ -1,0 +1,52 @@
+site_name: "Multi-Physics Problem (MPP) library"
+
+nav:
+  - Home: index.md
+  - Technical Guide:
+      - tech_guide/overview.md
+      - Multi-Layer Canopy Model:
+          - tech_guide/mlc/overview.md
+          - tech_guide/mlc/canopy_profile.md
+
+edit_uri: ""
+
+theme:
+  name: material
+  palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    toggle:
+      icon: material/weather-sunny
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    toggle:
+      icon: material/weather-night
+      name: Switch to light mode
+  features:
+    - navigation.indices
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+#    - navigation.indexes
+#    - navigation.tabs
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_javascript:
+  - javascript/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
+repo_url: https://github.com/mpp-lsm/mpp
