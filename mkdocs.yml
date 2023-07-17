@@ -15,6 +15,7 @@ nav:
           - tech_guide/mlc/photosynthesis_numerical_solution.md
           - tech_guide/mlc/leaf_boundary_layer_model.md
           - tech_guide/mlc/roughness_sublayer_model.md
+          - tech_guide/mlc/multi_layer_canopy.md
 
 edit_uri: ""
 
