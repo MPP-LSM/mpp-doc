@@ -8,6 +8,7 @@ nav:
           - tech_guide/mlc/overview.md
           - tech_guide/mlc/canopy_profile.md
           - tech_guide/mlc/shortwave_radiation.md
+          - tech_guide/mlc/longwave_radiation.md
 
 edit_uri: ""
 
