@@ -10,6 +10,9 @@ nav:
           - tech_guide/mlc/shortwave_radiation.md
           - tech_guide/mlc/longwave_radiation.md
           - tech_guide/mlc/photosynthesis_biological_demand.md
+          - tech_guide/mlc/photosynthesis_diffusion.md
+          - tech_guide/mlc/photosynthesis_stomatal_conductance_model.md
+          - tech_guide/mlc/photosynthesis_numerical_solution.md
 
 edit_uri: ""
 
@@ -34,7 +37,13 @@ theme:
 #    - navigation.indexes
 #    - navigation.tabs
 
+plugins:
+  - search
+  - bibtex:
+      bib_file: "refs.bib"
+
 markdown_extensions:
+  - footnotes
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.tabbed:
