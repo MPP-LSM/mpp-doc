@@ -2,9 +2,7 @@ site_name: "Multi-Physics Problem (MPP) library"
 
 nav:
   - Home: index.md
-  - Technical Guide:
-      - tech_guide/overview.md
-      - Multi-Layer Canopy Model:
+  - Multi-Layer Canopy Model:
           - tech_guide/mlc/overview.md
           - tech_guide/mlc/canopy_profile.md
           - tech_guide/mlc/shortwave_radiation.md
