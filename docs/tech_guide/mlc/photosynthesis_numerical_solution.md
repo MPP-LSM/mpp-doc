@@ -1,8 +1,8 @@
 
 The set of nonlinear equations for photosynthesis model include:
 
- 1. biological demand,
- 2. diffusion, and
+ 1. biological demand ([see here](photosynthesis_biological_demand.md##mjx-eqn%eqn_an_bio_demand)),
+ 2. diffusion ([see here](photosynthesis_diffusion.md##mjx-eqn%eqn_an_diffusion)), and
  3. [stomatal conductance model](photosynthesis_stomatal_conductance_model.md##Governing equations).
 
 The set of nonlinear equations are numerically solved when the residual equation, $R(x)$,
