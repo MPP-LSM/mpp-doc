@@ -1,6 +1,6 @@
 ## Governing equations
 
-The photosynthesis model has two equations (Equations \eqref{eqn_an_bio_demand} and \eqref{eqn_ci_diff}) that 
+The photosynthesis model has two equations ([first](photosynthesis_biological_demand.md#mjx-eqn%3Aeqn_an_bio_demand) and [second](photosynthesis_diffusion.md#mjx-eqn%3Aeqn_ci_diff)) that
 involves three unknowns ($c_i$, $A_n$, and $g_{sw}$). Thus, an additional equation is needed for stomatal 
 conductance to close the system of equations.
 In the literature, multiple stomatal conductance models (SCMs) have been developed that are
