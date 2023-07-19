@@ -59,7 +59,7 @@ Given equation \eqref{eqn:wind_profile_rsl_above}, the wind at canopy height is 
 ## Wind profile within canopy
 
 
-HF-2007 assumed an exponential wind profile within the canopy that is given as
+HF-2007[@harman2007simple] assumed an exponential wind profile within the canopy that is given as
 
 \begin{equation}
 	\label{eqn_du_dz_within}
@@ -91,7 +91,7 @@ equation \eqref{eqn_du_dz_above} and \eqref{eqn_du_dz_within} leads to
 
 ## Wind similarity function
 
-For the above canopy wind profile, HF-2007 assumed the similarity function for momentum to be
+For the above canopy wind profile, HF-2007[@harman2007simple] assumed the similarity function for momentum to be
 
 \begin{equation}
  \hat{\phi}_m \left( \frac{z-d}{l_m /\beta} \right) =
@@ -119,7 +119,7 @@ which is obtained using equation \eqref{eqn_phi_m} at $z = h_c$ and equation \eq
 ## Wind beta term
 
 The critical unknown in the roughness sublayer parameterization is $\beta$. 
-HF-2007 derived an expression for $\beta$ as
+HF-2007[@harman2007simple] derived an expression for $\beta$ as
 
 \begin{equation}
 	\beta \phi_m \left( \frac{h_c - d}{L_{MO}} \right) = \beta_N
@@ -222,7 +222,7 @@ An equation similar to equation \eqref{eqn_u_with_hc} can be written for $\theta
 									\right] 
 \end{eqnarray}
 
-For the above canopy wind profile, HF-2007 assumed the similarity function for momentum to be
+For the above canopy wind profile, HF-2007[@harman2007simple] assumed the similarity function for momentum to be
 
 \begin{equation}
  \hat{\phi}_c \left( \frac{z-d}{l_m /\beta} \right) =
