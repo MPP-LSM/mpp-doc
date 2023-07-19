@@ -44,7 +44,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -475,19 +486,39 @@
 
 <h1 id="overview">Overview</h1>
 <p>The Multi-Layer Canopy Model version 1 (MLCMv1) for the Energy Exascale Earth System Model (E3SM)
-Land Model (ELM), which is based on <a href="https://github.com/gbonan/CLM-ml_v1">CLM-ml v1</a><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>,
-resolves the micro-climate created by the vegetation canopies. 
-The MLCMv1 has been benchmarked against the CLM-ml v1 for the Ameriflux US-Unversity of Michigan
+Land Model (ELM) resolves the micro-climate created by the vegetation canopies. 
+ELM-MLCMv1 is based on <a href="https://github.com/gbonan/CLM-ml_v1">CLM-ml v1</a><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> and
+uses <a href="https://petsc.org">PETSc</a> to provide support for heterogeneous computing architectures.
+The performance portability of the model has been studied on NVIDIA and AMD GPUs.</p>
+<!--and a speedup of 25-50 times has been shown on a GPU relative to a CPU.-->
+<p>The MLCMv1 has been benchmarked against the CLM-ml v1 for the Ameriflux US-Unversity of Michigan
 Biological Station site. The equations describing the various physics in this technical guide are
 based on previous publications<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.</p>
-<p>The MLCMv1 uses <a href="https://petsc.org">PETSc</a> to provide support for heterogeneous computing architectures.
-The performance portability of the model has been studied on NVIDIA and AMD GPUs, and a speedup of
-25-50 times has been shown on a GPU relative to a CPU.</p>
+<figure>
+<p><a class="glightbox" href="../figures/mlc_schematic_3.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image title" src="../figures/mlc_schematic_3.jpg" /></a>
+  </p>
+<figcaption>
+  Schematic representation of ELM-MLCMv1.
+  </figcaption>
+</figure>
+<p>The ELM-MLCMv1 accounts for sunlit (shown in light green) and shaded (shown in dark green) leaves at each canopy
+level. The model includes the following four sub-models for:</p>
+<ol>
+<li>shortwave and longwave radiation,</li>
+<li>stomatal conductance,</li>
+<li>roughness sublayer (RSL) parameterization, and</li>
+<li>transport of heat and water vapor in the canopy air space (CAS).</li>
+</ol>
+<p>The radiation model and RSL parameterization lump sunlit and
+shaded leaves as one at each canopy layer, while the other two sub-models explicitly account
+for sunlit and shaded leaves. Similar to <a href="https://github.com/gbonan/CLM-ml_v1">CLM-ml v1</a><sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup>,
+it is assumed that water from the soil is transported to each leaf via unconnected xylems.
+The vertical profiles of the leaf and stem of a plant are described using a beta distribution.</p>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p>Gordon B Bonan, Edward G Patton, John J Finnigan, Dennis D Baldocchi, and Ian N Harman. Moving beyond the incorrect but useful paradigm: reevaluating big-leaf and multilayer plant canopies to model biosphere-atmosphere fluxes–a review. <em>Agricultural and Forest Meteorology</em>, 306:108435, 2021.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Gordon B Bonan, Edward G Patton, John J Finnigan, Dennis D Baldocchi, and Ian N Harman. Moving beyond the incorrect but useful paradigm: reevaluating big-leaf and multilayer plant canopies to model biosphere-atmosphere fluxes–a review. <em>Agricultural and Forest Meteorology</em>, 306:108435, 2021.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
 <p>Gordon B Bonan, Edward G Patton, Ian N Harman, Keith W Oleson, John J Finnigan, Yaqiong Lu, and Elizabeth A Burakowski. Modeling canopy-induced turbulence in the earth system: a unified parameterization of turbulent exchange within plant canopies and the roughness sublayer (clm-ml v0). <em>Geoscientific Model Development</em>, 11(4):1467–1496, 2018.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
@@ -587,5 +618,5 @@ The performance portability of the model has been studied on NVIDIA and AMD GPUs
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
